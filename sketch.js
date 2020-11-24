@@ -3,7 +3,7 @@ const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
-const Render = Matter.Render;
+// const Render = Matter.Render;
 
 var ground;
 var paperBall;
@@ -24,8 +24,8 @@ function setup() {
 	part1 = new Base(600, 657.5);
 	part2 = new Boundries(523,622);
 	part3 = new Boundries(678,622);
-	var render = Render.create({ element: document.body, engine: engine, options: { width: 1600, height: 700, wireframes: false } });
-	Render.run(render);
+	// var render = Render.create({ element: document.body, engine: engine, options: { width: 1600, height: 700, wireframes: false } });
+	// Render.run(render);
 	Engine.run(engine);
   
 }
@@ -45,3 +45,8 @@ function draw() {
  
 }
 
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+	    Matter.Body.applyForce(paperBall.paper, paperBall.paper.position, {x: 15, y: -15});
+    }
+}
