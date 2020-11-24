@@ -20,7 +20,7 @@ class Paper {
         rectMode(CENTER);
         strokeWeight(3);
         fill("pink");
-        ellipse(this.x, this.y, this.r,this.r);
+        ellipse(0, 0, this.r,this.r);
         noFill();
         pop()
     }
